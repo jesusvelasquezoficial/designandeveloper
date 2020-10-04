@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <slider></slider>
+    <card-servicios></card-servicios>
+    <jumbo-nosotros></jumbo-nosotros>
+    <list-nosotros></list-nosotros>
+    <form-contacto></form-contacto>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Slider from "@/components/Slider.vue";
+import CardServicios from "@/components/CardServicios.vue";
+import JumboNosotros from "@/components/JumboNosotros.vue";
+import ListNosotros from "@/components/ListNosotros.vue";
+import FormContacto from "@/components/FormContacto.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
+  data() {
+    return {};
+  },
   components: {
-    HelloWorld
-  }
-}
+    Slider,
+    CardServicios,
+    JumboNosotros,
+    ListNosotros,
+    FormContacto,
+  },
+};
 </script>
