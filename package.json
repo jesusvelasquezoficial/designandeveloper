@@ -13,6 +13,7 @@
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vue-template-compiler": "^2.6.12",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -20,9 +21,5 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0"
-  },
-  "engines": {
-    "node": "14.11.0",
-    "npm": "6.14.8"
   }
 }
