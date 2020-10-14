@@ -192,8 +192,9 @@ export default {
     sendEmail(e){
       e.preventDefault();
       var msg = this.form;
+      var baseURL = location.protocol + '//' + location.hostname + ':' + location.port;
       axios
-        .post("/send-email", msg)
+        .post(baseURL+"/send-email", msg)
         .then((res) => {
           console.log(res);
         })
