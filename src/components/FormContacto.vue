@@ -92,7 +92,7 @@
 </template>
 <script>
 import BtnWhatsapp from "@/components/BtnWhatsapp.vue";
-import axios from 'axios'
+import axios from "axios";
 
 import {
   required,
@@ -189,9 +189,10 @@ export default {
         servicio: null,
       };
     },
-    sendEmail(){
+    sendEmail(e){
+      e.preventDefault();
       var msg = this.form;
-        axios
+      axios
         .post("/send-email", msg)
         .then((res) => {
           console.log(res);
@@ -199,7 +200,7 @@ export default {
         .catch((err) => {
           console.log(err);
         });
-    }
+    },
   },
   components: {
     BtnWhatsapp,

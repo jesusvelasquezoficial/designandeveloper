@@ -1,8 +1,8 @@
 "use strict";
 var express = require("express");
 var path = require("path");
-var cors = require('cors')
-require('dotenv').config();
+var cors = require("cors");
+require("dotenv").config();
 
 var app = express();
 
@@ -14,7 +14,11 @@ app.use(express.json());
 
 app.use(require("./routes/index"));
 
-app.use(express.static(path.join(__dirname, '/dist/')));
+app.use(express.static(path.join(__dirname, "/dist/")));
+
+app.get("/*/", function(req, res) {
+  res.sendFile(__dirname + "/dist/index.html");
+});
 
 var server = app.listen(serverPort, function() {
   var port = server.address().port;
