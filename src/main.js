@@ -4,13 +4,19 @@ import router from './router'
 import store from './store'
 
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
-
+import Vuelidate from 'vuelidate'
+import axios from 'axios'
 import './lib/customCss'
+
+window.axios = axios
+axios.defaults.baseURL = 'http://127.0.0.1:8080'
 
 Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
+Vue.use(Vuelidate)
+
 
 new Vue({
   router,
