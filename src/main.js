@@ -9,7 +9,8 @@ import axios from 'axios'
 import './lib/customCss'
 
 window.axios = axios
-axios.defaults.baseURL = 'http://127.0.0.1:8080'
+  // axios.defaults.baseURL = 'http://0.0.0.0:3000'
+axios.defaults.baseURL = location.protocol + '//' + location.hostname + ':' + location.port;
 
 Vue.config.productionTip = false
 

@@ -35,6 +35,8 @@ router.post("/send-email", async(req, res) => {
 
     const info = await transporter.sendMail(mailOptions);
 
+    console.log(JSON.stringify(mailOptions));
+
     console.log("Message sent: %s", info.messageId);
 
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
