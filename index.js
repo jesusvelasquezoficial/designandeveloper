@@ -6,7 +6,7 @@ require("dotenv").config();
 
 var app = express();
 
-var serverPort = process.env.PORT || 80;
+var serverPort = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
